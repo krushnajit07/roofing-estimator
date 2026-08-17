@@ -10,6 +10,7 @@ export const configSeed = {
   questions: [
     {
       key: "roof_area",
+      order: 1,
       label: "Roughly how big is your roof?",
       type: "number",
       unit: "sq ft",
@@ -22,6 +23,7 @@ export const configSeed = {
 
     {
       key: "material",
+      order: 2,
       label: "What material do you want?",
       type: "select",
       required: true,
@@ -52,6 +54,7 @@ export const configSeed = {
 
     {
       key: "pitch",
+      order: 3,
       label: "How steep is the roof?",
       type: "select",
       required: true,
@@ -77,6 +80,7 @@ export const configSeed = {
 
     {
       key: "layers",
+      order: 4,
       label: "How many layers of old roofing are on there now?",
       type: "select",
       required: true,
@@ -102,6 +106,7 @@ export const configSeed = {
 
     {
       key: "stories",
+      order: 5,
       label: "How many stories is the house?",
       type: "select",
       required: true,

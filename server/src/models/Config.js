@@ -34,6 +34,11 @@ const QuestionSchema = new mongoose.Schema(
       required: true,
     },
 
+    order: {
+      type: Number,
+      required: true,
+    },
+
     label: {
       type: String,
       required: true,
