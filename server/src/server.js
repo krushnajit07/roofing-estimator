@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import configRoutes from "./routes/configRoutes.js";
+import estimateRoutes from "./routes/estimateRoutes.js";
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.get('/api/health', (req, res) => {
 });
 
 app.use("/api/config", configRoutes);
+app.use("/api/estimate", estimateRoutes);
 
 const PORT = process.env.PORT || 5000;
 
