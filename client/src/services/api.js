@@ -20,7 +20,7 @@ export async function submitEstimate(payload) {
     body: JSON.stringify(payload),
   });
 
-  const data = await response.json();
+  const {data} = await response.json();
 
   if (!response.ok) {
     throw new Error(data.message || "Failed to generate estimate");
