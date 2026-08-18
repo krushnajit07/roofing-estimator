@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from "dotenv";
+import cors from 'cors';
 import connectDB from "./config/db.js";
 import configRoutes from "./routes/configRoutes.js";
 import estimateRoutes from "./routes/estimateRoutes.js";
@@ -9,6 +10,11 @@ import adminRoutes from "./routes/adminRoutes.js";
 dotenv.config();
 
 const app = express();
+
+app.use(cors({
+  origin: process.env.CLIENT_URL,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}));
 
 app.use(express.json());
 
